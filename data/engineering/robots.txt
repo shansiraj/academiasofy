@@ -1,0 +1,14 @@
+# robots.txt for Research Papers Directory
+
+# Allow all crawlers access to specific files
+User-agent: *
+Allow: 2101.06374v4.pdf
+
+# Disallow crawlers from accessing other files
+# Disallow: 
+
+# Specify the crawl delay to prevent server overload
+Crawl-delay: 10
+
+
+
