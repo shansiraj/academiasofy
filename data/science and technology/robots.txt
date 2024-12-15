@@ -1,0 +1,17 @@
+# robots.txt for Science and Technology Papers
+# Allow all crawlers access to specific files
+User-agent: *
+Allow: 2112.12345v1.pdf
+Allow: 2412.09181v1.pdf
+Allow: 2412.09621v1.pdf
+Allow: 2412.09625v1.pdf
+Allow: 2412.09627v1.pdf
+
+# Disallow crawlers from accessing other files
+# Disallow: 
+
+# Disallow access to metadata folder
+# Disallow: /metadata/
+
+# Specify the crawl delay to prevent server overload
+Crawl-delay: 10

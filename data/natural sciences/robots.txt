@@ -1,0 +1,23 @@
+# robots.txt for Natural Sciences Papers
+
+# Allow all crawlers access to specific files
+User-agent: *
+Allow: 2007.12345v1.pdf
+Allow: 2412.06521v1.pdf
+Allow: 2412.07678v1.pdf
+Allow: 2412.08498v1.pdf
+Allow: 2412.09358v1.pdf
+Allow: 2412.09435v1.pdf
+Allow: 2412.09542v1.pdf
+Allow: 2412.09560v1.pdf
+Allow: 2412.09592v1.pdf
+Allow: bioinformatics_24_1_1.pdf
+
+# Disallow crawlers from accessing other files
+# Disallow: 
+
+# Disallow access to metadata folder
+# Disallow: /metadata/
+
+# Specify the crawl delay to prevent server overload
+Crawl-delay: 10

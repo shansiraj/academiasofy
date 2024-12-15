@@ -1,0 +1,13 @@
+data:
+  research_paper_repository: './data'
+  research_paper_file_map: './data/file_map.json'
+  total_docs: './data/total_docs.json'
+
+index:
+  positional_index: './index/positional_index.json'
+
+search_engine:
+  is_scheduler_enabled: False
+
+
+

@@ -1,0 +1,18 @@
+# robots.txt for Health and Medicine Papers
+
+# Allow all crawlers access to specific files
+User-agent: *
+Allow: 2001.09778v2.pdf
+Allow: 13831-1-10-20220501.pdf
+Allow: annsurg00049-0057.pdf
+Allow: s41392-020-00243-2.pdf
+Allow: westjmed00102-0060.pdf
+
+# Disallow crawlers from accessing other files
+# Disallow: 
+
+# Disallow access to metadata folder
+# Disallow: /metadata/
+
+# Specify the crawl delay to prevent server overload
+Crawl-delay: 10

@@ -1,0 +1,18 @@
+# robots.txt for Engineering Papers
+
+# Allow all crawlers access to specific files
+User-agent: *
+Allow: 1701.07852v2.pdf
+Allow: 2003.09829v1.pdf
+Allow: 2012.04895v1.pdf
+Allow: 2101.06374v4.pdf
+Allow: 3514228.pdf
+
+# Disallow crawlers from accessing other files
+# Disallow: 
+
+# Specify the crawl delay to prevent server overload
+Crawl-delay: 10
+
+
+

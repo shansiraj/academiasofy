@@ -1,0 +1,18 @@
+# robots.txt for Economic Papers
+
+# Allow all crawlers access to specific files
+User-agent: *
+Allow: 2412.08342v1.pdf
+Allow: 2412.08831v1.pdf
+Allow: 2412.08850v1.pdf
+Allow: 2412.09226v1.pdf
+Allow: 2412.09321v1.pdf
+
+# Disallow crawlers from accessing other files
+# Disallow: 
+
+# Specify the crawl delay to prevent server overload
+Crawl-delay: 10
+
+
+
