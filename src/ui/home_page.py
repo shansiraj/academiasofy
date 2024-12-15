@@ -7,8 +7,6 @@ def main():
 
     file_map = load_file_map()
 
-    
-
     # Streamlit app layout
     st.set_page_config(page_title="Research Search Engine", layout="wide")
 
@@ -36,23 +34,16 @@ def main():
         )
                 
         st.sidebar.image("img/logo.png", use_container_width=True)
-
         st.markdown('<p class="center-text">This Search Engine searches a collection of PDF research papers across multiple domain-specific folders in the AcademiaSoft Research Paper Repository, with each paper named using a unique document ID for easy identification.</p>', unsafe_allow_html=True)
         st.markdown('<hr class="white-line">', unsafe_allow_html=True)
         st.markdown('<p class="center-text">Developed by D. Shan Siraj</p>', unsafe_allow_html=True)
         st.markdown('<p class="center-text">STNO: COMSCDS231P-023</p>', unsafe_allow_html=True)
 
-    # Main Content
     st.title("AcademiaSofy: Research Paper Search Engine")
-
-    # Search bar
     query = st.text_input("Search for research papers:")
 
-    # Search results
     if query:
-        # Load index
-        
-        
+
         # Perform search
         results = search(query)
         
@@ -61,16 +52,13 @@ def main():
             print (results)
             for doc, score in results:
 
-
-                # st.write(f"{doc} (Score: {score})")
-
                 st.markdown(
                     f"""
                     <p style="font-weight: bold; display: inline;">Paper: </p>
                     <p style="font-weight: bold; color: blue; display: inline;">{doc}</p>
                     <p style="font-weight: bold; color: red; display: inline;"> (Score: {score})</p>
                     """, unsafe_allow_html=True
-)
+                )
 
                 if doc in file_map:
                     pdf_path = file_map[doc]
@@ -91,8 +79,6 @@ def main():
                 
                 # Extract relevant snippet
                 relevant_snippet = extract_relevant_snippet(query, pdf_path)
-                # st.write(f"Text Extract:")
-                # st.write(relevant_snippet)
 
                 st.markdown(
                             f"""
@@ -100,14 +86,17 @@ def main():
                             {relevant_snippet}
                             """, unsafe_allow_html=True)
                 
-                # Add download link
-                with open(pdf_path, "rb") as file:
-                    st.download_button(
-                        label=f"Download Paper",
-                        data=file,
-                        file_name=doc,
-                        mime="application/pdf"
-                    )
+                try:
+                    # Add download link
+                    with open(pdf_path, "rb") as file:
+                        st.download_button(
+                            label=f"Download Paper",
+                            data=file,
+                            file_name=doc,
+                            mime="application/pdf"
+                        )
+                except Exception as exp:
+                    st.write("Downloading not supported")
 
                 st.markdown('---')
         else:
