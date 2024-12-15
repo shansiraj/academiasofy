@@ -1,3 +1,3 @@
-from src.modules import evaluate
+from modules.test import evaluate
 
 evaluate.main()
